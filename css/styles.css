@@ -1,0 +1,289 @@
+@charset "utf-8";
+
+p {
+    margin: 0;
+}
+
+h2  {
+    margin-bottom: 0;
+}
+html {
+    overflow: auto;
+}
+body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+/* header */
+header {
+    display:flex;
+    margin: 10px 20px;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+  }
+  
+  .site-logo img {
+    float:left;
+    width: 160px;
+    height: 80px;
+    padding-top: 10px;
+    margin: 0;
+    object-fit: cover;
+  }
+  
+  .pc-menu {
+      display: none;
+  }
+  
+  #menu-icon {
+    float:right;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  #menu-icon img{
+    width: 40px;
+    padding-top: 10px;
+  }
+  
+  #mask {
+    background-color: rgba(0,0,0, 0.8);
+    position: fixed;
+    top: 0;
+    right:0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+  }
+  
+  #modal{
+    z-index: 2;
+    position: absolute;
+  }
+  
+  #modal .container {
+    background-color: #ccffff;
+    font-size: 32px;
+    width: 200px;
+    height: 300px;  
+    position: relative;
+    top: 200px;
+    left: 80px;
+    padding-left: 0;
+  }
+  
+  #modal img {
+    color:white;
+  }
+  #modal ul {
+    list-style: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    padding-top: 40px;
+    padding-bottom:40px;
+    padding-left: 20px;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  #modal li {
+    border-bottom: 1px solid;
+  }
+  
+  
+  #modal li + li {
+    padding: 8px;
+  }
+  #close-icon {
+    width: 40px;
+    float:right;
+    padding-right: 10px;
+    padding-top: 10px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+/* main */
+main {
+     margin: 10px 20px;
+}
+h1 {
+    font-size: 30px;
+    margin-bottom: 0;
+    padding-left: 8px;
+}
+
+#favorite img,
+#hobby img {
+    width: 90vw;
+    height: 200px;
+    background-size: cover;
+    margin-top: 40px;
+}
+
+#favorite {
+  animation-name: fadedown;
+  animation-duration: 2s;
+  animation-delay: .2s;
+}
+
+#hobby {
+  animation-name: fadedown;
+  animation-duration: 2s;
+  animation-delay: .8s;
+}
+
+@keyframes fadedown {
+0% {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+80% {
+  opacity: 1;
+  transform: translateY(0);
+}
+}
+
+#human {
+    text-align: center;
+}
+#human-photo img {
+    height: 200px;
+    background-size: cover;
+    margin-top: 40px;
+    padding-top: 0;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+
+/*footer */
+footer {
+    opacity: 0.8;
+    text-align: center;
+    padding-top: 50px;
+}
+
+@media (min-width: 767px) {
+.text {
+    padding: 100px 80px;
+}
+#favorite img,
+#hobby img ,
+#human-photo img{
+        width: 50%;
+        height: 300px;
+}
+
+h1 {
+    font-size: 50px;
+}
+h2 {
+  font-size: 20px;
+}
+
+p {
+  font-size:20px;
+}
+
+body {
+  margin: 0 5vw;
+}
+
+/* header */
+header {
+    display:flex;
+    margin: 0 20px;
+  }
+  
+  .site-logo img {
+    width: 200px;
+    height: 100px;
+    padding: 20px 0;
+    margin-left: 40px;
+    float: left;
+  }
+  
+  .pc-menu {
+    display: flex;
+  }
+  .pc-menu  ul{
+    display:flex;
+    float: right;
+    list-style: none;
+    font-size: 30px;
+    margin:  50px  0 ;
+    margin-left: 100px;
+    user-select: none;
+    cursor: pointer;
+    align-items: center;  
+  }
+  
+  .pc-menu li {
+    margin-right: 30px;
+    border: 1px solid;
+    padding: 0 30px;
+    background: #eee;  
+  }
+
+  .pc-menu li:hover {
+    opacity:0.6;
+  }
+  
+  .pc-menu a {
+    text-align: center;
+  }
+  
+  .sp-menu {
+    display: none;
+  }
+  /* main */
+    #human {
+        display:flex;
+        align-items: center;
+        text-align: center;
+        padding: 10px 10px;
+    }
+
+    #human-photo {
+        float: left;
+    }
+
+    #human-photo img {
+        width: 300px;
+        height: 280px;
+        margin-top: 0;
+    }
+
+#basic-info {
+    float: right;
+    padding-left: 40px;
+    padding-top: 20px;
+}
+
+
+#favorite {
+    display: flex;
+    flex-direction: row-reverse;
+} 
+
+#hobby{
+    display: flex;
+}
+
+footer {
+    text-align: right;
+}
+
+}
